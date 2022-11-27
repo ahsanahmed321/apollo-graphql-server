@@ -1,0 +1,9 @@
+type Role {
+  id: ID!
+  role: String
+}
+
+type Query {
+  roles: [Role!]!
+  role(id: ID!): Role
+}

@@ -1,0 +1,10 @@
+type UserRole {
+  id: ID!
+  userId: Int
+  roleId: Int
+}
+
+type UserRoleInput {
+  userId: Int
+  roleId: Int
+}

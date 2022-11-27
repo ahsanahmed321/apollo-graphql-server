@@ -1,0 +1,61 @@
+{
+  "name": "apollo-graphql-server",
+  "version": "1.0.0",
+  "description": "apollo graphql server boilerplate",
+  "main": "server.ts",
+  "scripts": {
+    "seed": "sequelize-cli db:seed:all",
+    "migrate": "sequelize-cli db:migrate",
+    "dev": "npm run migrate && npm run seed && nodemon -r dotenv/config src/server.ts",
+    "lint": "eslint src/**/**/*.ts",
+    "generate": "graphql-codegen --config codegen.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahsanahmed321/apollo-graphql-server.git"
+  },
+  "keywords": [
+    "apollo-graphql-server",
+    "authentication"
+  ],
+  "author": "Muhammad Ata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahsanahmed321/apollo-graphql-server.git/issues"
+  },
+  "homepage": "https://github.com/ahsanahmed321/apollo-graphql-server#readme",
+  "dependencies": {
+    "@apollo/server": "^4.0.2",
+    "@graphql-tools/schema": "^9.0.4",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "graphql": "^16.6.0",
+    "graphql-import-node": "^0.0.5",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.25.3"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.13.7",
+    "@graphql-codegen/typescript": "^2.8.0",
+    "@graphql-codegen/typescript-resolvers": "^2.7.5",
+    "@types/bcrypt": "^5.0.0",
+    "@types/cors": "^2.8.12",
+    "@types/sequelize": "^4.28.14",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "^8.26.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.5.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}

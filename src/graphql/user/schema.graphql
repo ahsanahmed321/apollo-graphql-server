@@ -1,0 +1,46 @@
+scalar Date
+
+type HotelRoles {
+  RoleId: Int
+  HotelRefId: Int
+}
+
+type User {
+  id: ID
+  firstName: String
+  lastName: String
+  nic: String
+  dob: Date
+  email: String
+  password: String
+  User_Hotel_Roles: [HotelRoles]
+}
+
+input UserInput {
+  firstName: String!
+  lastName: String!
+  nic: String!
+  dob: Date!
+  email: String!
+  password: String!
+}
+
+input AuthInput {
+  email: String!
+  password: String!
+}
+
+type AuthPayload {
+  user: User!
+  token: String!
+}
+
+type Mutation {
+  register(user: UserInput!): AuthPayload!
+}
+
+type Query {
+  users: [User!]!
+  user(id: ID!): User
+  signIn(user: AuthInput!): AuthPayload!
+}
